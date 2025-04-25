@@ -8,8 +8,7 @@ export default function Logo() {
       <Image
         className="max-w-none"
         src={LogoImg}
-        width={150}
-        height={60}
+        width={180}
         priority
         alt="Stellar"
       />

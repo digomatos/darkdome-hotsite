@@ -7,6 +7,13 @@ import Client03 from "@/public/images/logo-elastic.png";
 import Client04 from "@/public/images/logo-paloalto.png";
 import Client05 from "@/public/images/logo-splunk.webp";
 import Client06 from "@/public/images/logo-fortinet.png";
+import Client07 from "@/public/images/logo-checkpoint.png";
+import Client08 from "@/public/images/logo-meraki.png";
+import Client09 from "@/public/images/logo-entraid.png";
+import Client10 from "@/public/images/logo-365.png";
+import Client11 from "@/public/images/logo-azure.png";
+import Client12 from "@/public/images/logo-google.png";
+import Client13 from "@/public/images/logo-duo.png";
 
 const logos = [
   { src: Client01, alt: "Client 01" },
@@ -15,6 +22,12 @@ const logos = [
   { src: Client04, alt: "Client 04" },
   { src: Client05, alt: "Client 05" },
   { src: Client06, alt: "Client 06" },
+  { src: Client07, alt: "Client 07" },
+  { src: Client08, alt: "Client 08" },
+  { src: Client09, alt: "Client 09" },
+  { src: Client10, alt: "Client 10" },
+  { src: Client11, alt: "Client 11" },
+  { src: Client12, alt: "Client 12" },
 ];
 
 export default function Clients() {
@@ -29,7 +42,7 @@ export default function Clients() {
         <div className="py-8 md:py-12">
           <div className="overflow-hidden">
             <div className="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-              <ul className="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8">
+              <ul className="flex [animation-duration:20s] animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8">
                 {logos.map((logo, index) => (
                   <li key={index}>
                     <Image
@@ -42,7 +55,7 @@ export default function Clients() {
                 ))}
               </ul>
               <ul
-                className="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8"
+                className="flex [animation-duration:20s] animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8"
                 aria-hidden="true"
               >
                 {logos.map((logo, index) => (

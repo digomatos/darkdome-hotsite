@@ -15,7 +15,7 @@ export default function Header() {
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">
             {/* Desktop menu links */}
-            <ul className="flex grow justify-center flex-wrap items-center">
+            <ul className="flex">
               <li>
                 <Link
                   className="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
@@ -42,31 +42,6 @@ export default function Header() {
               </li>
             </ul>
           </nav>
-
-          {/* Desktop sign in links */}
-          <ul className="flex-1 flex justify-end items-center">
-            <li>
-              <Link
-                className="font-medium text-sm text-slate-300 hover:text-white whitespace-nowrap transition duration-150 ease-in-out"
-                href="/"
-              >
-                Sign in
-              </Link>
-            </li>
-            <li className="ml-6">
-              <Link
-                className="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none"
-                href="/"
-              >
-                <span className="relative inline-flex items-center">
-                  Sign up{" "}
-                  <span className="tracking-normal text-purple-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">
-                    -&gt;
-                  </span>
-                </span>
-              </Link>
-            </li>
-          </ul>
 
           <MobileMenu />
         </div>

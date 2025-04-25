@@ -35,15 +35,16 @@ export default function Hero() {
               className="h1 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4"
               data-aos="fade-down"
             >
-              The Future of Threat Management
+              One feed. Zero trust. Automated investigation.
             </h1>
             <p
               className="text-lg text-slate-300 mb-8"
               data-aos="fade-down"
               data-aos-delay="200"
             >
-              AI-powered cybersecurity that centralizes alerts, decodes
-              complexity, and delivers precise threat prevention in real-time.
+              Ingest the chaos, deliver clarity: AI-powered cybersecurity alerts
+              triage that centralizes visibility, unpacks complexity, and
+              provides precise incident investigation in real-time
             </p>
             <div
               className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4"
@@ -53,7 +54,7 @@ export default function Hero() {
               <div>
                 <a
                   className="btn text-slate-200 hover:text-white bg-slate-900/25 hover:bg-slate-900/30 w-full transition duration-150 ease-in-out"
-                  href="#0"
+                  href="#feature"
                 >
                   <span>Read more</span>
                   <span className="tracking-normal text-white-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1">

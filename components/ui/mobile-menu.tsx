@@ -90,7 +90,7 @@ export default function MobileMenu() {
           <li>
             <Link
               className="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-              href="/feature"
+              href="#feature"
             >
               Feature
             </Link>
@@ -98,7 +98,7 @@ export default function MobileMenu() {
           <li>
             <Link
               className="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-              href="/benefits"
+              href="#benefits"
             >
               Benefits
             </Link>
@@ -106,7 +106,7 @@ export default function MobileMenu() {
           <li>
             <Link
               className="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
-              href="/faq"
+              href="#faq"
             >
               FAQ
             </Link>
