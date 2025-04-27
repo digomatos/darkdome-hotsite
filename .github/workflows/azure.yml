@@ -2,8 +2,8 @@ name: Build & Deploy to Azure Web App
 
 on:
   push:
-    branches: [master]      # dispara em cada push na master
-  workflow_dispatch:        # botão manual (opcional)
+    branches: [master]       # dispara em cada push na master
+  workflow_dispatch:         # botão manual
 
 env:
   APP_NAME: darkdome-hotsite
@@ -27,11 +27,13 @@ jobs:
 
     - name: Archive standalone bundle
       run: |
+        mkdir -p .next/standalone/.next
+        cp -R .next/static .next/standalone/.next/
         zip -r release.zip \
           .next/standalone \
-          .next/static \
           public \
           package*.json
+      shell: bash
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v3.0.1
