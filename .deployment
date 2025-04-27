@@ -1,2 +1,6 @@
 [config]
-command = npm install --legacy-peer-deps && npm run build
+SCM_DO_BUILD_DURING_DEPLOYMENT = false
+command = 
+  npm ci --legacy-peer-deps --prefer-offline && 
+  npm run build && 
+  cp -r node_modules/.bin/next node_modules/next/dist/bin/
