@@ -2,7 +2,7 @@ name: Build & Deploy to Azure Web App
 
 on:
   push:
-    branches: [main]            # ajuste se usar outra branch
+    branches: [master]         
 
 jobs:
   build-and-deploy:
@@ -15,7 +15,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 20
-        cache: 'npm'            # acelera builds
+        cache: 'npm'            
 
     - run: npm ci
     - run: npm run build
