@@ -22,7 +22,7 @@ jobs:
     - run: npm prune --production
 
     - run: |
-        zip -r release.zip .next public package*.json node_modules
+        zip -r release.zip .next/standalone .next/static public package*.json
       shell: bash
 
     - name: Deploy to Azure Web App
