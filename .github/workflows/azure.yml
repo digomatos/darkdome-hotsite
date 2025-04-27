@@ -1,0 +1,33 @@
+name: Build & Deploy to Azure Web App
+
+on:
+  push:
+    branches: [main]            # ajuste se usar outra branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Node.js 20
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: 'npm'            # acelera builds
+
+    - run: npm ci
+    - run: npm run build
+    - run: npm prune --production
+
+    - run: |
+        zip -r release.zip .next public package*.json node_modules
+      shell: bash
+
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v3    :contentReference[oaicite:1]{index=1}
+      with:
+        app-name: darkdome-hotsite     # seu App Service
+        publish-profile: ${{ secrets.AZURE_APPSERVICE_PUBLISHPROFILE }}
+        package: release.zip
